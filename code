@@ -139,8 +139,7 @@ classdef app1 < matlab.apps.AppBase
             % Calculate SSB modulation signal 
             message_signal = vm * cos(2*pi*fm*t); 
             carrier_signal = vc * cos(2*pi*fc*t); 
-            modulated_signal =v.*((cos((2*pi)*fm*t)).*(cos(2*pi*fc*t))
-(sin(2*pi*fm*t).*sin(2*pi*fc*t))); 
+            modulated_signal =v.*((cos((2*pi)*fm*t)).*(cos(2*pi*fc*t)).*(sin(2*pi*fm*t).*sin(2*pi*fc*t))); 
             % Plot on UIAxes, UIAxes2, UIAxes3, UIAxes3_2 
             plot(app.UIAxes, t, message_signal); 
             title(app.UIAxes, 'Message Signal'); 
